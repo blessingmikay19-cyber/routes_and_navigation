@@ -22,12 +22,18 @@ class DetailsView extends StatelessWidget {
                 return Text('Name: ${vm.name}'); //provider
               },
             ),
+
+            Consumer<StudentViewmodel>(
+              builder: (context, vm, child) {
+                return Text('Phone: ${vm.phone}'); //provider
+              },
+            ),
             Text(''),
             ElevatedButton(
               onPressed: () {
                 Navigator.pushNamed(context, RoutesManager.edit);
               },
-              child: const Text("Edit Name"),
+              child: const Text("Edit Details"),
             ),
             Text(''),
             ElevatedButton(

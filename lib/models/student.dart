@@ -1,5 +1,6 @@
 class Student {
   String name;
+  String phone;
 
-  Student({required this.name});
+  Student({required this.name, required this.phone});
 }
